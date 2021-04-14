@@ -6,6 +6,7 @@ package br.com.proway.senior.folhadepagamento.telaInicial;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.com.proway.senior.folhadepagamento.calculos.Calculos;
 import br.com.proway.senior.folhadepagamento.telaReport.TelaReport;
 
 /**
@@ -44,10 +45,9 @@ public class TelaInicial {
 			if (senha.contains(sc.nextLine())) {
 				System.out.println("--------------------");
 				System.out.print("Acesso concedido\n");
-				retorno = true;
-				// adicionarPermissao(usuarios);
-				// System.out.println(verificaPermissao(nome));
-				// mostraMenu();
+				retorno = adicionarPermissao(usuarios);
+				 System.out.println(verificaPermissao(nome));
+				 mostraMenu();
 
 			} else {
 				retorno = false;
@@ -105,9 +105,10 @@ public class TelaInicial {
 	 * report(Apenas essa, por enquanto), assim como a declaração de parametros para
 	 * teste
 	 */
-	public static int mostraMenu(int escolhaIdUsuario) {
+	public static int mostraMenu() {
 		// Instacia da classe da tela de report
 		TelaReport tela = new TelaReport();
+		int escolhaIdUsuario;
 		Scanner sc = new Scanner(System.in);
 		// Escolha do usuário no menu
 		System.out.print("--------------------\n");
@@ -116,12 +117,20 @@ public class TelaInicial {
 			System.out.println("Opção 1 - Serviços de RH");
 			System.out.println("Opção 2 - Tela Report");
 			System.out.println("Opção 0 - Sair");
+			escolhaIdUsuario = sc.nextInt();
 			// Para teste JUnit
 			// escolhaIdUsuario = sc.nextInt();
 			if (escolhaIdUsuario == 2) {
 				// Chama menu de report caso a opção 2 seja a escolhida
-				// tela.mostraMenuReport(2);
+				 tela.mostraMenuReport();
 				return escolhaIdUsuario;
+			}
+			if (escolhaIdUsuario == 1) {
+			Calculos calculos = new Calculos();
+			calculos.imprimeFolha(101);
+			System.out.print("--------------------\n");
+			}else {
+				System.exit(0);
 			}
 		} while (escolhaIdUsuario != 0);
 		return escolhaIdUsuario;

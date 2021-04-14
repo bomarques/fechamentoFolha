@@ -22,9 +22,8 @@ String corpoEmail, assuntoEmail;
 	 *                         para a entrada no menu report
 	 * @return String retorna o assunto do email para teste no JUnit
 	 */
-	public String mostraMenuReport(int escolhaIdUsuario) {
-		// Variaveis com assunto do menu
-		
+	public String mostraMenuReport() {
+		int escolhaIdUsuario;
 
 		// Variaveis para a entrada de dados com int e String
 		Scanner entradaString = new Scanner(System.in);
@@ -39,7 +38,7 @@ String corpoEmail, assuntoEmail;
 			System.out.println("Opção 3 - Solicitação");
 			System.out.println("Opção 4 - Dúvidas");
 			System.out.println("Opção 0 - Sair");
-
+			escolhaIdUsuario = entradaInt.nextInt();
 			// Escolha das opções
 			//escolhaIdUsuario = entradaInt.nextInt();
 			switch (escolhaIdUsuario) {
