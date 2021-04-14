@@ -116,7 +116,7 @@ public class TestesCalculos {
 	// Teste método imprime folha
 	@Test public void testImprimeFolha() { 
 	String resultado = Calculos.imprimeFolha(colabId); 
-	assertEquals(resultado.toString(), stringTesteImprime.toString()); 
+	assertEquals(resultado, stringTesteImprime); 
 	}
 	 
 

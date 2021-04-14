@@ -11,7 +11,7 @@ import br.com.proway.senior.folhadepagamento.telaReport.TelaReport;
 /**
  * Classe inicial que seta o menu de inicialização
  * 
- * @author Sabrina/Vanderlei
+ * @author Sabrina, Vanderlei, Sarah, Lucas W e Leonardo P.
  * @since 13/04/21
  * @version 1.0
  *

@@ -28,6 +28,7 @@ public class Calculos {
 	static double valorCoparticipacaoPlano = 236.25;
 	static double valorBonificacaoColab = 250.00;
 	
+	
 	/**
 	 * Criar evento para folha
 	 * 
@@ -102,11 +103,10 @@ public class Calculos {
 		+ salarioFinal);
 		System.out.println(folhaGravada);
 		System.out.println(folhaGravada.length());
-		folhaGravada = "a";
 		return folhaGravada.toString();
 	}
 
-	
+	//
 	/**
 	 * Metodo para Calcular insalubridade
 	 * Este metodo recebera diferentes percentuais( 10%, 20% ou 40%) de insalubridade para ao final retornar 
@@ -126,7 +126,7 @@ public class Calculos {
 		}
 	}
 
-	
+	//
 	/**
 	 * Calcula o valor inicial do salário
 	 * 
